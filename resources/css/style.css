@@ -214,15 +214,49 @@ p {
     text-align: center;
 }
 
-$accent: #EF629F;
-$secondary: #EECDA3;
-$dark: #222;
-$medium-dark: lighten($dark, 25%);
+.flipcards {
+    text-align: center;
+    align-content: center;
+    display: inline-flex;
+    margin: 30px;
+    padding: 30px;
+}
 
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ffffff;
+  perspective: 1000px;
+}
 
-@mixin section-padding {
-  padding: 10vh 0;
-  @media (min-width: 768px) { // I'd prefer this to be the $md Bootstrap grid variable
-    padding: 20vh 0;
-  }
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }

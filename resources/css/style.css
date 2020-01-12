@@ -157,8 +157,8 @@ p {
 }
 
 #about,#services,#contact{
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 140px;
+    margin-right: 140px;
     font-family: "Verdana"; /* Verdana is a true web font because the simple sans serif lines and it’s super large size. The letters are almost elongated, which makes it easy to read online.*/
 }
 

@@ -228,6 +228,7 @@ p {
   height: 200px;
   border: 1px solid #ffffff;
   perspective: 1000px;
+  margin: 15px;  
 }
 
 .flip-card-inner {
